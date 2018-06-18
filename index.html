@@ -8,8 +8,8 @@
 </head>
 <body>
   <div id="app">
-    <!-- <p v-html="message"></p> -->
-    <p v-text="message"></p>
+    <p v-if="show">{{ message }}</p>
+    <p v-if="show2 == 'ready'">{{ message }}</p>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
