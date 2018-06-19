@@ -3,6 +3,13 @@ var app = new Vue({
   data: {
     show: true,
     show2: 'ready',
-    message: 'Hello World'
+    message: 'Hello World',
+    int1: 1,
+    int2: 2
+  },
+  computed: {
+    sum() {
+      return this.int1 + this.int2;
+    }
   }
 })
