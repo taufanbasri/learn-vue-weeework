@@ -14,8 +14,8 @@ var app = new Vue({
     }
   },
   methods: {
-    sumProcess() {
-      return this.result = this.int1 + this.int2;
+    sumProcess(int3) {
+      return this.result = this.int1 + this.int2 + int3;
     }
   }
 })
