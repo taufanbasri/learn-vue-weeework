@@ -11,6 +11,8 @@
     <p v-if="show">{{ message }}</p>
     <p v-if="show2 == 'ready'">{{ message }}</p>
     <p>Result from {{ int1 }} + {{ int2 }} = {{ sum }}</p>
+    <p>Result via method {{ result }}</p>
+    <button @click="sumProcess">Process</button>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
