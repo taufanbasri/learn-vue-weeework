@@ -11,9 +11,16 @@
     <input type="text" v-model="message">
     <label>{{ message }}</label>
     <hr>
+
     <textarea v-model="textarea"></textarea>
     <br>
     <pre>{{ textarea }}</pre>
+    <hr>
+
+    <input type="radio" v-model="radiobutton" value="opsi1"> Opsi 1
+    <input type="radio" v-model="radiobutton" value="opsi2"> Opsi 2
+    <br>
+    <p>Your choice: {{ radiobutton }}</p>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
