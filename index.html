@@ -21,6 +21,19 @@
     <input type="radio" v-model="radiobutton" value="opsi2"> Opsi 2
     <br>
     <p>Your choice: {{ radiobutton }}</p>
+    <hr>
+
+    <label>Mancing</label>
+    <input type="checkbox" value="mancing" v-model="checkbox">
+    <label>Sepeda</label>
+    <input type="checkbox" value="sepeda" v-model="checkbox">
+    <label>Coding</label>
+    <input type="checkbox" value="coding" v-model="checkbox">
+    <br>
+    <p>Hobby saya: {{ checkbox }}</p>
+    <ul>
+      <li v-for="check in checkbox" :key="check.key">{{ check }}</li>
+    </ul>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
