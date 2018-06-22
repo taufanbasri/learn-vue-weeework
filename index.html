@@ -34,6 +34,17 @@
     <ul>
       <li v-for="check in checkbox" :key="check.key">{{ check }}</li>
     </ul>
+    <hr>
+
+    Choice your programming language:<br>
+    <select v-model="select">
+      <option value="" disabled>--Choice Programming Language--</option>
+      <option value="PHP">PHP</option>
+      <option value="Javascript">Javascript</option>
+      <option value="Golang">Golang</option>
+    </select>
+    <br>
+    <p>Your favorite language is: {{ select }}</p>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
