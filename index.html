@@ -37,14 +37,17 @@
     <hr>
 
     Choice your programming language:<br>
-    <select v-model="select">
+    <select v-model="select" multiple>
       <option value="" disabled>--Choice Programming Language--</option>
       <option value="PHP">PHP</option>
       <option value="Javascript">Javascript</option>
       <option value="Golang">Golang</option>
     </select>
     <br>
-    <p>Your favorite language is: {{ select }}</p>
+    <p>Your favorite language is:</p>
+    <ul>
+      <li v-for="selected in select" :key="selected.key">{{ selected }}</li>
+    </ul>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
