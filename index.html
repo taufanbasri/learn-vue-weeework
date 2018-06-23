@@ -8,8 +8,12 @@
 </head>
 <body>
   <div id="app">
-    <button @click="message = 'the button has been clicked'">Click</button>
-    <button @click="showAlert">Show Alert</button>
+    <label>Press Enter Key</label>
+    <input type="text" @keyup.enter="message = 'you pressing enter'">
+    <br>
+
+    <label>Press Any Key</label>
+    <input type="text" @keyup.esc="escKey" @keyup.space="spaceKey" @keyup.up="upKey" @keyup.down="downKey" @keyup.65="aKey">
     <br>
     {{ message }}
   </div>
