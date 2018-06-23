@@ -1,8 +1,11 @@
 var app = new Vue({
   el: '#app',
   data: {
-    imgFile: 'assets/img/image.jpeg',
-    link: 'http://google.com',
-    colorFont: 'red'
+    message: ''
+  },
+  methods: {
+    showAlert() {
+      alert('button has clicked')
+    }
   }
 })

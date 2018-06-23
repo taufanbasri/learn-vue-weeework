@@ -8,11 +8,10 @@
 </head>
 <body>
   <div id="app">
-    <img :src="imgFile" width="500">
+    <button @click="message = 'the button has been clicked'">Click</button>
+    <button @click="showAlert">Show Alert</button>
     <br>
-    <a :href="link">About Page</a>
-    <br>
-    <p :style="{color: colorFont}">Red Font</p>
+    {{ message }}
   </div>
 
     <script src="assets/vendor/vue.js"></script>
