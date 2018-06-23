@@ -1,23 +1,16 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: ''
+    content: '',
+    vehicles: ['car', 'motorcycle', 'bike']
   },
   methods: {
-    escKey() {
-      this.message = 'You pressing esc key'
+    addVehicle() {
+      this.vehicles.push(this.content);
+      this.content = '';
     },
-    spaceKey() {
-      this.message = 'You pressing space key'
-    },
-    upKey() {
-      this.message = 'You pressing up key'
-    },
-    downKey() {
-      this.message = 'You pressing down key'
-    },
-    aKey() {
-      this.message = 'You pressing a key'
-    },
+    removeVehicle(index) {
+      this.vehicles.splice(index,1);
+    }
   }
 })

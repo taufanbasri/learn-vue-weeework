@@ -8,14 +8,26 @@
 </head>
 <body>
   <div id="app">
-    <label>Press Enter Key</label>
-    <input type="text" @keyup.enter="message = 'you pressing enter'">
+    <ul>
+      <li>{{ vehicles[0] }}</li>
+    </ul>
     <br>
 
-    <label>Press Any Key</label>
-    <input type="text" @keyup.esc="escKey" @keyup.space="spaceKey" @keyup.up="upKey" @keyup.down="downKey" @keyup.65="aKey">
+    <ul>
+      <li v-for="vehicle in vehicles">{{ vehicle }}</li>
+    </ul>
     <br>
-    {{ message }}
+
+    <label>Add vehicle: </label><br>
+    <input type="text" v-model="content">
+    <button @click="addVehicle">Add</button>
+    <br>
+
+    <ul>
+      <li v-for="(vehicle, index) in vehicles">
+        <button @click="removeVehicle(index)">x</button> {{ vehicle }}
+      </li>
+    </ul>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
