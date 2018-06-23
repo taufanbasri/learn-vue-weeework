@@ -9,25 +9,19 @@
 <body>
   <div id="app">
     <ul>
-      <li>{{ vehicles[0] }}</li>
-    </ul>
-    <br>
-
-    <ul>
-      <li v-for="vehicle in vehicles">{{ vehicle }}</li>
-    </ul>
-    <br>
-
-    <label>Add vehicle: </label><br>
-    <input type="text" v-model="content">
-    <button @click="addVehicle">Add</button>
-    <br>
-
-    <ul>
-      <li v-for="(vehicle, index) in vehicles">
-        <button @click="removeVehicle(index)">x</button> {{ vehicle }}
+      <li v-for="vehicle in vehicles">
+        Type: {{ vehicle.type }}, Brand: {{ vehicle.brand }}, Color: {{ vehicle.color }}
       </li>
     </ul>
+    <br>
+
+    <ul>
+      <li v-for="value in object">
+        {{ value }}
+      </li>
+    </ul>
+
+    {{ object }}
   </div>
 
     <script src="assets/vendor/vue.js"></script>
