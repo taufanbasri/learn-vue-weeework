@@ -1,10 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: '',
-    textarea: '',
-    radiobutton: '',
-    checkbox: [],
-    select: []
+    imgFile: 'assets/img/image.jpeg',
+    link: 'http://google.com',
+    colorFont: 'red'
   }
 })

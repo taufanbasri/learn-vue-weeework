@@ -8,46 +8,11 @@
 </head>
 <body>
   <div id="app">
-    <input type="text" v-model="message">
-    <label>{{ message }}</label>
-    <hr>
-
-    <textarea v-model="textarea"></textarea>
+    <img :src="imgFile" width="500">
     <br>
-    <pre>{{ textarea }}</pre>
-    <hr>
-
-    <input type="radio" v-model="radiobutton" value="opsi1"> Opsi 1
-    <input type="radio" v-model="radiobutton" value="opsi2"> Opsi 2
+    <a :href="link">About Page</a>
     <br>
-    <p>Your choice: {{ radiobutton }}</p>
-    <hr>
-
-    <label>Mancing</label>
-    <input type="checkbox" value="mancing" v-model="checkbox">
-    <label>Sepeda</label>
-    <input type="checkbox" value="sepeda" v-model="checkbox">
-    <label>Coding</label>
-    <input type="checkbox" value="coding" v-model="checkbox">
-    <br>
-    <p>Hobby saya: {{ checkbox }}</p>
-    <ul>
-      <li v-for="check in checkbox" :key="check.key">{{ check }}</li>
-    </ul>
-    <hr>
-
-    Choice your programming language:<br>
-    <select v-model="select" multiple>
-      <option value="" disabled>--Choice Programming Language--</option>
-      <option value="PHP">PHP</option>
-      <option value="Javascript">Javascript</option>
-      <option value="Golang">Golang</option>
-    </select>
-    <br>
-    <p>Your favorite language is:</p>
-    <ul>
-      <li v-for="selected in select" :key="selected.key">{{ selected }}</li>
-    </ul>
+    <p :style="{color: colorFont}">Red Font</p>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
