@@ -8,10 +8,7 @@
 </head>
 <body>
   <div id="app">
-    <greeting></greeting>
-    <br>
-
-    <button-counter></button-counter>
+    <blog-post v-for="post in posts" :key="post.id" :post="post"></blog-post>
   </div>
 
     <script src="assets/vendor/vue.js"></script>
